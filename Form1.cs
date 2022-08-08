@@ -13,9 +13,13 @@ namespace Dewan
 {
     public partial class MainForm : Form
     {
+        public static MainForm instance;
+       
         public MainForm()
         {
             InitializeComponent();
+            instance=this;
+           
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -92,7 +96,11 @@ namespace Dewan
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form2 form2=new Form2();
+            form2.Show();
 
+            object item = listBox1.SelectedItem;
+            Form2.instance.label.Text = "  :المرسل اليه   "+item.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
