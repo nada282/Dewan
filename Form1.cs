@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,19 +20,21 @@ namespace Dewan
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            StreamReader reader = new StreamReader("C:/Users/Bessan/Desktop/Dewan1-master/TextFile1.txt");
+            StringBuilder builder = new StringBuilder();
+            string line = reader.ReadLine();
+            while (line != null)
+            {
+                int first = line.IndexOf(',');
+                string name = line.Substring(0, first);
+                comboBoxDept.Items.Add(name);
+                line = reader.ReadLine();
+            }
         }
 
         private void comboBoxDept_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string filePath = string.Empty;
-            string fileExt=string.Empty;
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                filePath = openFileDialog.FileName; 
-              //  fileExt = PATH.FileName;  
-            }
+          
 
         }
 
@@ -90,6 +93,15 @@ namespace Dewan
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex > -1)
+            {
+
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            }
         }
     }
 }
