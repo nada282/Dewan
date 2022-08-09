@@ -44,9 +44,9 @@
             this.comboBoxDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDept.FormattingEnabled = true;
             this.comboBoxDept.Location = new System.Drawing.Point(114, 70);
-            this.comboBoxDept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxDept.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDept.Name = "comboBoxDept";
-            this.comboBoxDept.Size = new System.Drawing.Size(141, 21);
+            this.comboBoxDept.Size = new System.Drawing.Size(273, 21);
             this.comboBoxDept.TabIndex = 0;
             this.comboBoxDept.SelectedIndexChanged += new System.EventHandler(this.comboBoxDept_SelectedIndexChanged);
             // 
@@ -73,8 +73,8 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(290, 71);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(413, 72);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(56, 19);
             this.btnAdd.TabIndex = 3;
@@ -96,7 +96,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(413, 327);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(114, 198);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(174, 95);
             this.listBox1.TabIndex = 6;
@@ -117,7 +117,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(114, 305);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 7;
@@ -149,7 +149,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxDept);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

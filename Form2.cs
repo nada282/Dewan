@@ -13,14 +13,16 @@ namespace Dewan
     public partial class Form2 : Form
     {
         public static Form2 instance;
+        public static Form2 instance2;
         public Label label;
-      
+      public Label Label1;
         public Form2()
         {
             InitializeComponent();
             instance = this;
             label = label8;
-        
+            Label1 = id_1;
+            
 
         }
 
@@ -61,7 +63,7 @@ namespace Dewan
 
         private void label10_Click(object sender, EventArgs e)
         {
-            label10.Text = "التاريخ: "+ DateTime.Now.ToString("yyyy-MM-dd");
+            
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -114,9 +116,46 @@ namespace Dewan
 
         }
 
-        private void label31_Click(object sender, EventArgs e)
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void label37_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        // private void label38(object sender, EventArgs e)
+        // {
+        //Text = "التاريخ: " + DateTime.Now.ToString("yyyy-MM-dd");
+        //}
     }
 }
