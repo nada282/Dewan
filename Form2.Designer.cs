@@ -108,9 +108,13 @@ namespace Dewan
             // label3
             // 
             this.label3.AutoSize = true;
+ master
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(581, 119);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.label3.Location = new System.Drawing.Point(634, 210);
+ master
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 24);
             this.label3.TabIndex = 2;
@@ -610,6 +614,7 @@ namespace Dewan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+ master
             this.ClientSize = new System.Drawing.Size(1355, 696);
             this.Controls.Add(this.ptnprint);
             this.Controls.Add(this.label28);
@@ -620,6 +625,19 @@ namespace Dewan
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+
+            this.ClientSize = new System.Drawing.Size(1337, 649);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+ master
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);

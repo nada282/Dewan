@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+
 
 namespace Dewan
 {
@@ -24,7 +26,7 @@ namespace Dewan
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            StreamReader reader = new StreamReader("C:/Users/Bessan/Desktop/Dewan1-master/TextFile1.txt");
+            StreamReader reader = new StreamReader("C:/Users/user/Desktop/TextFile1.txt");
             StringBuilder builder = new StringBuilder();
             string line = reader.ReadLine();
             while (line != null)
@@ -78,6 +80,7 @@ namespace Dewan
 
                 object item = comboBoxDept.SelectedItem;
                 listBox1.Items.Add(item)  ;
+                comboBoxDept.Items.Remove(item) ;
                 
                }
             else { 
@@ -98,6 +101,7 @@ namespace Dewan
 
         private void button2_Click(object sender, EventArgs e)
         {
+ master
             int count = 0;
             string[] st=null;
              
@@ -155,6 +159,34 @@ namespace Dewan
         //    Form2.instance.Label1.Text = st[1] +"  :الرمز البريدي     ";
 
         //    //   Form2.instance.label.Text = "  :المرسل اليه   " + s.Split('_');
+
+            CaptureScreen();
+            PrintDocument printDocument1 = new PrintDocument();
+            printDocument1.Print();
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+        }
+
+        Bitmap memoryImage;
+
+        private void CaptureScreen()
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            Size s = this.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+        }
+
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(memoryImage, 0, 0);
+ master
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -162,8 +194,15 @@ namespace Dewan
             if (listBox1.SelectedIndex > -1)
             {
 
-                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+               listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                comboBoxDept.Items.Add(listBox1.SelectedItems);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+         comboBoxDept.Items.Clear();
+        listBox1.Items.Clear();
         }
     }
 }

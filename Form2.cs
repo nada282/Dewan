@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 
 namespace Dewan
 {
     public partial class Form2 : Form
     {
+ master
         public static Form2 instance;
         public static Form2 instance2;
         public Label label;
       public Label Label1;
+
+        
+
+ master
         public Form2()
         {
             InitializeComponent();
@@ -51,6 +57,7 @@ namespace Dewan
 
         }
 
+ master
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -157,5 +164,8 @@ namespace Dewan
         // {
         //Text = "التاريخ: " + DateTime.Now.ToString("yyyy-MM-dd");
         //}
+
+
+ master
     }
 }
